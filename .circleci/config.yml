@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Report code coverage to Code Climate
           command: |
-            ./cc-test-reporter after-build -t simplecov --exit-code $? || true
+            ./cc-test-reporter after-build -t lcov --exit-code $? || true
       - save_cache:
           paths:
             - node_modules
