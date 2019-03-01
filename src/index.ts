@@ -5,5 +5,5 @@ export {
   CSSProperties,
   StyleDeclaration,
   StyleDeclarationValue,
-  CSSPropertiesComplete, // StyleSheetServer, // StyleSheetTestUtils,
+  CSSPropertiesComplete,
 } from './aphrodite-wrapper';

@@ -4,6 +4,10 @@
   "description": "Aphrodite helpers",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
   "scripts": {
     "build": "yarn clean && yarn compile && yarn lint",
     "compile": "tsc -b",
