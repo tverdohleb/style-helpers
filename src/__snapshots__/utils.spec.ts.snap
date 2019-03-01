@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generate metric strings Should return correct REM string with default base 1`] = `"1rem "`;
+
+exports[`Generate metric strings Should return correct RGBA string for HSV color 1`] = `"rgba(179, 125, 125, 1)"`;
+
+exports[`Generate metric strings Should return correct RGBA string for hex color 1`] = `"rgba(171, 205, 239, 1)"`;
