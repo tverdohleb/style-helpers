@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Aphrodite wrapper Global styles 1`] = `"p {display: block;} "`;
+
+exports[`Aphrodite wrapper Nested styles 1`] = `".parentStyle_10lk2fs {display: block;} .parentStyle_10lk2fs .childStyle {position: relative;} "`;
