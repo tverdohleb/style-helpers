@@ -30,27 +30,18 @@ jobs:
       - run: yarn lint
       - run: yarn test:coverage
       - run: yarn build
-      - type: cache-restore
-          name: Restore Code Climate cache
-          key: v1-code-climate-latest
-          - run:
-              name: Install Code Climate reporter
-              command: |
-                if [[ ! -x cc-test-reporter ]]
-                then
-                  curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-                  chmod +x ./cc-test-reporter
-                fi
-          - type: cache-save
-            name: Save Code Climate cache
-            key: v1-code-climate-latest
-            paths:
-              - ./cc-test-reporter
-
-          - run:
-              name: Report code coverage to Code Climate
-              command: |
-                ./cc-test-reporter after-build -t simplecov --exit-code $? || true
+      - run:
+          name: Install Code Climate reporter
+          command: |
+            if [[ ! -x cc-test-reporter ]]
+            then
+              curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+              chmod +x ./cc-test-reporter
+            fi
+      - run:
+          name: Report code coverage to Code Climate
+          command: |
+            ./cc-test-reporter after-build -t lcov --exit-code $? || true
       - save_cache:
           paths:
             - node_modules

@@ -23,6 +23,12 @@ const getSheetText = (sheet: CSSStyleSheet): string => {
   return allRules;
 };
 
+const getStyleText = (): string => {
+  const styleTags = (global as any).document.getElementsByTagName('style');
+  const lastTag = styleTags[styleTags.length - 1];
+  return getSheetText(lastTag.sheet);
+};
+
 describe('Aphrodite wrapper', () => {
   it('Nested styles', done => {
     const styleSheet = StyleSheet.create({
@@ -37,10 +43,8 @@ describe('Aphrodite wrapper', () => {
     css(styleSheet.parentStyle);
 
     asap(() => {
-      const styleTags = (global as any).document.getElementsByTagName('style');
-      const lastTag = styleTags[styleTags.length - 1];
-      const sheetText = getSheetText(lastTag.sheet);
-      expect(sheetText).toMatchSnapshot();
+      const styleText = getStyleText();
+      expect(styleText).toMatchSnapshot();
       done();
     });
   });
@@ -57,10 +61,8 @@ describe('Aphrodite wrapper', () => {
     css(styleSheet.globals);
 
     asap(() => {
-      const styleTags = (global as any).document.getElementsByTagName('style');
-      const lastTag = styleTags[styleTags.length - 1];
-      const sheetText = getSheetText(lastTag.sheet);
-      expect(sheetText).toMatchSnapshot();
+      const styleText = getStyleText();
+      expect(styleText).toMatchSnapshot();
       done();
     });
   });
