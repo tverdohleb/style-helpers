@@ -10,7 +10,8 @@
     "lint": "tslint --project ./tsconfig.json",
     "lint:fix": "yarn lint --fix",
     "clean": "rimraf ./dist",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "yarn test --coverage"
   },
   "repository": {
     "type": "git",
