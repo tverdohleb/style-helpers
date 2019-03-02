@@ -13,9 +13,9 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: yarn install
       - run: yarn lint
-      - run: yarn test:coverage
+      - run: yarn test
       - run: yarn build
-      - run: npm publish
+      - run: npm publish --access=public
   build:
     docker:
       - image: circleci/node:8.11
