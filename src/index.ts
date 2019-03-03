@@ -7,3 +7,5 @@ export {
   StyleDeclarationValue,
   CSSPropertiesComplete,
 } from './aphrodite-wrapper';
+
+export { px, percent, em, rem, rgba } from './utils';

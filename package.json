@@ -68,12 +68,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "workspaces": {
-    "nohoist": [
-      "**/rxjs",
-      "**/lint-staged",
-      "**/lint-staged/**"
-    ]
   }
 }
