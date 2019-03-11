@@ -8,4 +8,4 @@ export {
   CSSPropertiesComplete,
 } from './aphrodite-wrapper';
 
-export { px, percent, em, rem, rgba } from './utils';
+export { px, percent, em, rem, rgba, deg, vw, vh } from './utils';
