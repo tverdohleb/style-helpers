@@ -1,4 +1,4 @@
-import { createMetricString, rem, px, percent, em, rgba } from './utils';
+import { createMetricString, rem, px, percent, em, deg, vh, vw, rgba } from './utils';
 import { Metric } from './constants';
 
 describe('Generate metric strings', () => {
@@ -49,6 +49,30 @@ describe('Generate metric strings', () => {
     const result = rem(value);
 
     expect(result).toMatchSnapshot();
+  });
+
+  it('Should return correct deg string', () => {
+    const value = 90;
+
+    const result = deg(value);
+
+    expect(result).toEqual(`${value}${Metric.DEG} `);
+  });
+
+  it('Should return correct vh string', () => {
+    const value = 45;
+
+    const result = vh(value);
+
+    expect(result).toEqual(`${value}${Metric.VH} `);
+  });
+
+  it('Should return correct vw string', () => {
+    const value = 50;
+
+    const result = vw(value);
+
+    expect(result).toEqual(`${value}${Metric.VW} `);
   });
 
   it('Should return correct RGBA string for hex color', () => {

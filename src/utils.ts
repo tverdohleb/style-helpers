@@ -27,6 +27,21 @@ const em = (value: number): string => createMetricString(value, Metric.EM);
 const percent = (value: number): string => createMetricString(value, Metric.PERCENTS);
 
 /**
+ * Wrap value to deg string
+ */
+const deg = (value: number): string => createMetricString(value, Metric.DEG);
+
+/**
+ * Wrap value to vh string
+ */
+const vh = (value: number): string => createMetricString(value, Metric.VH);
+
+/**
+ * Wrap value to vw string
+ */
+const vw = (value: number): string => createMetricString(value, Metric.VW);
+
+/**
  * Convert color and wrap to rgba string
  */
 const rgba = (color: tinycolor.ColorInput, opacity: number): string => {
@@ -35,4 +50,4 @@ const rgba = (color: tinycolor.ColorInput, opacity: number): string => {
   return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
 
-export { rem, px, percent, em, createMetricString, rgba };
+export { rem, px, percent, em, createMetricString, rgba, deg, vh, vw };
