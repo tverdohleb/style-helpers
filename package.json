@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/aphrodite": "0.5.13",
-    "@types/asap": "2.0.0",
+    "@types/asap": "2.0.2",
     "@types/jest": "24.9.1",
     "@types/jsdom": "12.2.4",
     "@types/tinycolor2": "1.4.2",
