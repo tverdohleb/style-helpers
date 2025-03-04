@@ -36,7 +36,7 @@
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
-    "@types/aphrodite": "0.5.13",
+    "@types/aphrodite": "2.0.4",
     "@types/asap": "2.0.0",
     "@types/jest": "24.9.1",
     "@types/jsdom": "12.2.4",
